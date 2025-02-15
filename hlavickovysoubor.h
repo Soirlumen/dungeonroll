@@ -1,6 +1,7 @@
 #include <iostream>
-#include "entity.h"
-#include "gameboard.h"
 #include <random>
+#include <vector>
+#include <string>
+
 
 

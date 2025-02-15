@@ -40,6 +40,15 @@ void gameboard::gamerAttack()
     piš("dal jsi prisere: ", dmg, " damage, bestii zbyva: ", beast.getHealth(), " zivotu\n");
 }
 
+void gameboard::gamerUseItem()
+{
+    std::cout<<"ktery item?"<<std::endl;
+    gamer.showInventory();
+    int kvak;
+    std::cin>>kvak;
+    gamer.useItem(kvak);
+}
+
 void gameboard::gamerDecision(unsigned int _dec)
 {
     switch (_dec)
@@ -47,9 +56,15 @@ void gameboard::gamerDecision(unsigned int _dec)
     case 1:
         gamerAttack();
         break;
-
+    case 2:
+        gamerUseItem();
+        break;
     default:
-        piš("Neudelal jsi nic lmao... ");
+    //vymyslet jestli je nutne tu pouzivat rekurzi1
+        piš("Neudelal jsi nic lmao... zkus to znovu chca cha\n");
+        unsigned int _newdec;
+        std::cin>>_newdec;
+        gamerDecision(_newdec);
         break;
     }
 }
@@ -67,7 +82,7 @@ void gameboard::game()
     while (true)
     {
         piš("zivoty hrace: ", gamer.getHealth(), ", zivoty bestie: ", beast.getHealth(), "\n");
-        piš("kolo hrace:, napis 1, pokud chces boj \n");
+        piš("kolo hrace:, napis 1, pokud chces boj, napis 2, pokud pouzit item \n");
         int i;
         std::cin >> i;
         if (i == 1)
@@ -106,7 +121,7 @@ void gameboard::game2()
     while (true)
     {
         piš(round, " # kolo, zivoty hrace: ", gamer.getHealth(), ", zivoty bestie: ", beast.getHealth(), "\n");
-        piš("kolo hrace:, napis 1, pokud chces boj \n");
+        piš("kolo hrace:, napis 1, pokud chces boj, napis 2, pokud pouzit item \n");
         int dec;
         std::cin >> dec;
         gamerDecision(dec);
@@ -130,4 +145,8 @@ void gameboard::game2()
     {
         piš("prisera te zabila lol");
     }
+}
+
+void gameboard::decision(unsigned int _d)
+{
 }
