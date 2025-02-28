@@ -11,6 +11,7 @@ public:
     item(int  _t, int _v);
     int getVaule();
     int getType()const;
+    ~item() {}
 };
 
 #endif
