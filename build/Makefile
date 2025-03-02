@@ -176,53 +176,29 @@ gameboard.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_program.dir\build.make CMakeFiles/my_program.dir/gameboard.cpp.s
 .PHONY : gameboard.cpp.s
 
-inventar.obj: inventar.cpp.obj
-.PHONY : inventar.obj
+inventory.obj: inventory.cpp.obj
+.PHONY : inventory.obj
 
 # target to build an object file
-inventar.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_program.dir\build.make CMakeFiles/my_program.dir/inventar.cpp.obj
-.PHONY : inventar.cpp.obj
+inventory.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_program.dir\build.make CMakeFiles/my_program.dir/inventory.cpp.obj
+.PHONY : inventory.cpp.obj
 
-inventar.i: inventar.cpp.i
-.PHONY : inventar.i
-
-# target to preprocess a source file
-inventar.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_program.dir\build.make CMakeFiles/my_program.dir/inventar.cpp.i
-.PHONY : inventar.cpp.i
-
-inventar.s: inventar.cpp.s
-.PHONY : inventar.s
-
-# target to generate assembly for a file
-inventar.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_program.dir\build.make CMakeFiles/my_program.dir/inventar.cpp.s
-.PHONY : inventar.cpp.s
-
-item.obj: item.cpp.obj
-.PHONY : item.obj
-
-# target to build an object file
-item.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_program.dir\build.make CMakeFiles/my_program.dir/item.cpp.obj
-.PHONY : item.cpp.obj
-
-item.i: item.cpp.i
-.PHONY : item.i
+inventory.i: inventory.cpp.i
+.PHONY : inventory.i
 
 # target to preprocess a source file
-item.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_program.dir\build.make CMakeFiles/my_program.dir/item.cpp.i
-.PHONY : item.cpp.i
+inventory.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_program.dir\build.make CMakeFiles/my_program.dir/inventory.cpp.i
+.PHONY : inventory.cpp.i
 
-item.s: item.cpp.s
-.PHONY : item.s
+inventory.s: inventory.cpp.s
+.PHONY : inventory.s
 
 # target to generate assembly for a file
-item.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_program.dir\build.make CMakeFiles/my_program.dir/item.cpp.s
-.PHONY : item.cpp.s
+inventory.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_program.dir\build.make CMakeFiles/my_program.dir/inventory.cpp.s
+.PHONY : inventory.cpp.s
 
 main.obj: main.cpp.obj
 .PHONY : main.obj
@@ -263,12 +239,9 @@ help:
 	@echo ... gameboard.obj
 	@echo ... gameboard.i
 	@echo ... gameboard.s
-	@echo ... inventar.obj
-	@echo ... inventar.i
-	@echo ... inventar.s
-	@echo ... item.obj
-	@echo ... item.i
-	@echo ... item.s
+	@echo ... inventory.obj
+	@echo ... inventory.i
+	@echo ... inventory.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

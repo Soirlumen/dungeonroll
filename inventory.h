@@ -3,6 +3,13 @@
 #include "hlavickovysoubor.h"
 #pragma once
 
+enum itemID{
+    SMALLHEAL=1,
+    SMALLPOWERBOOST=2,
+    SMALLLUCKBOOST=4,
+    SMALLINVENTORYEXPANSION=3
+  };
+  
 class itemtype
 {
 private:
@@ -51,11 +58,11 @@ public:
     unsigned int get_invent_size();
 
     // prace s inventarem
-    void add_item(int _newitemid);
-    void remove_item(int _removingitemid);
+    bool add_item(int _newitemid);
+    bool remove_item(int _removingitemid);
     int find_position_of_item_by_id(int _itemid);
     int find_item_by_position(int _position);
-    itemtype use_item(int _itemid);
+    //int use_item(int _itemid); je treba tato metoda vubec?
     void inventory_cout();
     //TODO: opravit operator<<
     //friend std::ostream &operator<<(std::ostream &os, const inventory &inv);

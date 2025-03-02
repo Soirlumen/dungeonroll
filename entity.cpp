@@ -1,15 +1,10 @@
 #include "entity.h"
 
-entity::entity(int _h, unsigned int _p, int _is, std::vector<item> _i) : health(_h), power(_p), inventory(_i), inventorysize(_is) {
-    //TODO: kontrolovat ze vlozene inventory ma min itemu nez kolik je misto v inventari
-}
-
-entity::entity(int _h, unsigned int _p, int _is): health(_h), power(_p), inventorysize(_is)
+entity::entity(unsigned int _h, unsigned int _p, inventory _i) : health(_h), power(_p), pocket(_i)
 {
-    inventory={};
 }
 
-int entity::getHealth()
+unsigned int entity::getHealth()
 {
     return health;
 }
@@ -29,94 +24,77 @@ void entity::setPower(unsigned int _p)
     power = _p;
 }
 
+inventory entity::getInventory() const
+{
+    return pocket;
+}
+
 bool entity::isAlive()
 {
-    if (getHealth() > 0)
+    return (getHealth() > 0) ? true : false;
+}
+// TODO, udělat to tak, abych se neopakovala 3x+
+void entity::health_changer(int _health_modyfier)
+{
+    int modyfied = int(getPower()) + _health_modyfier;
+    if (modyfied < 0)
     {
-        return true;
+        setHealth(0); // nelze mít záporne zdravi, w8.
+        return;
     }
-    return false;
+    setHealth(static_cast<unsigned int>(modyfied));
 }
 
-std::vector<item> &entity::getInventory()
+void entity::power_changer(int _power_modyfier)
 {
-    return inventory;
+    int modyfied = int(getPower()) + _power_modyfier;
+    if (modyfied < 0)
+    {
+        setPower(0); // nelze mít zápornou sílu, w8.
+        return;
+    }
+    setPower(static_cast<unsigned int>(modyfied));
 }
-
-void entity::addInInventory(item what)
+void entity::inventory_size_changer(int _inv_size_modyfier)
 {
-    if (inventory.size() <= inventorysize)
-    {
-        inventory.push_back(what);
+    int modyfied = int(pocket.get_max_size()) + _inv_size_modyfier;
+    if (_inv_size_modyfier < 0)
+    { // asi zatim nechci resit, co se stane, kdyz bude plny inventar a snizila by velikost inv
+        return;
     }
-    else
-    {
-        std::cout << "neni misto v inventari" << std::endl;
-    }
+    pocket.set_max_size(static_cast<unsigned int>(modyfied));
 }
-
-void entity::removeFromInventory(unsigned int position)
+// ACHJO
+void entity::use_item(int _itemId)
 {
-    if (isInInventory(position) == true)
+    if (pocket.remove_item(_itemId))
     {
-        inventory.erase(inventory.begin() + position);
-    }
-    else
-    {
-        std::cout << "toto neni misto v inventari" << std::endl;
-    }
-}
-
-void entity::useItem(unsigned int position)
-//TODO:opravit logiku kodu, aby se 2x nevolalo isInInventory()
-{
-    if (isInInventory(position) == true)
-    {
-    item pom = getInventory().at(position);
-    switch (pom.getType())
-    {
-    case 1:
-        setHealth(getHealth() + pom.getVaule());
-        break;
-    case 2:
-        setPower(getPower() + pom.getVaule());
-
-    default:
-        std::cout << "nic se nedeje" << std::endl;
-        break;
-    }
-    removeFromInventory(position);}
-    else{
-        std::cout << "toto neni misto v inventari" << std::endl;
-    }
-}
-
-void entity::showInventory()
-{
-    if (inventory.size() == 0)
-    {
-    }
-    else
-    {
-        int i = 0;
-        for (item it : getInventory())
+        switch (_itemId)
         {
-            std::cout << i << " je typu " << getInventory().at(i).getType() << ", ";
-            i++;
+        case SMALLHEAL:
+            health_changer(pocket.get_itemtype(SMALLHEAL).get_boost_value());
+            break;
+        case SMALLPOWERBOOST:
+            power_changer(pocket.get_itemtype(SMALLPOWERBOOST).get_boost_value());
+            break;
+        case SMALLINVENTORYEXPANSION:
+            inventory_size_changer(pocket.get_itemtype(SMALLINVENTORYEXPANSION).get_boost_value());
+            break;
+        default:
+            //std::cout << "item is not valid\n";
+            break;
         }
-        std::cout<<"\n";
     }
 }
 
-bool entity::isInInventory(unsigned int position)
+void entity::vanish_item(unsigned int _itemId)
 {
-    if (position < getInventory().size())
-    {
-        return true;
-    }
-    else
-    {
-        std::cout << "toto neni misto v inventari" << std::endl;
-        return false;
-    }
+    if(pocket.remove_item(_itemId)) return;
+    //idk mozna zbytecna metoda
+}
+
+//do budoucnosti se tu muze lepe vypocitavat ze statu attack power, treba jestli implementuju luck, unavu, neco neco
+unsigned int entity::entity_attack()
+{
+    return getPower();
 }

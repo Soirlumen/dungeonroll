@@ -96,38 +96,24 @@ CMakeFiles/my_program.dir/gameboard.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/my_program.dir/gameboard.cpp.s"
 	C:\winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64ucrt-12.0.0-r2\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S G:\111vse\111fjfi\3rok\cpp_ysikjdfghb\zkusplaydung\gameboard.cpp -o CMakeFiles\my_program.dir\gameboard.cpp.s
 
-CMakeFiles/my_program.dir/inventar.cpp.obj: CMakeFiles/my_program.dir/flags.make
-CMakeFiles/my_program.dir/inventar.cpp.obj: G:/111vse/111fjfi/3rok/cpp_ysikjdfghb/zkusplaydung/inventar.cpp
-CMakeFiles/my_program.dir/inventar.cpp.obj: CMakeFiles/my_program.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=G:\111vse\111fjfi\3rok\cpp_ysikjdfghb\zkusplaydung\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/my_program.dir/inventar.cpp.obj"
-	C:\winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64ucrt-12.0.0-r2\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_program.dir/inventar.cpp.obj -MF CMakeFiles\my_program.dir\inventar.cpp.obj.d -o CMakeFiles\my_program.dir\inventar.cpp.obj -c G:\111vse\111fjfi\3rok\cpp_ysikjdfghb\zkusplaydung\inventar.cpp
+CMakeFiles/my_program.dir/inventory.cpp.obj: CMakeFiles/my_program.dir/flags.make
+CMakeFiles/my_program.dir/inventory.cpp.obj: G:/111vse/111fjfi/3rok/cpp_ysikjdfghb/zkusplaydung/inventory.cpp
+CMakeFiles/my_program.dir/inventory.cpp.obj: CMakeFiles/my_program.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=G:\111vse\111fjfi\3rok\cpp_ysikjdfghb\zkusplaydung\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/my_program.dir/inventory.cpp.obj"
+	C:\winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64ucrt-12.0.0-r2\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_program.dir/inventory.cpp.obj -MF CMakeFiles\my_program.dir\inventory.cpp.obj.d -o CMakeFiles\my_program.dir\inventory.cpp.obj -c G:\111vse\111fjfi\3rok\cpp_ysikjdfghb\zkusplaydung\inventory.cpp
 
-CMakeFiles/my_program.dir/inventar.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/my_program.dir/inventar.cpp.i"
-	C:\winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64ucrt-12.0.0-r2\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E G:\111vse\111fjfi\3rok\cpp_ysikjdfghb\zkusplaydung\inventar.cpp > CMakeFiles\my_program.dir\inventar.cpp.i
+CMakeFiles/my_program.dir/inventory.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/my_program.dir/inventory.cpp.i"
+	C:\winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64ucrt-12.0.0-r2\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E G:\111vse\111fjfi\3rok\cpp_ysikjdfghb\zkusplaydung\inventory.cpp > CMakeFiles\my_program.dir\inventory.cpp.i
 
-CMakeFiles/my_program.dir/inventar.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/my_program.dir/inventar.cpp.s"
-	C:\winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64ucrt-12.0.0-r2\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S G:\111vse\111fjfi\3rok\cpp_ysikjdfghb\zkusplaydung\inventar.cpp -o CMakeFiles\my_program.dir\inventar.cpp.s
-
-CMakeFiles/my_program.dir/item.cpp.obj: CMakeFiles/my_program.dir/flags.make
-CMakeFiles/my_program.dir/item.cpp.obj: G:/111vse/111fjfi/3rok/cpp_ysikjdfghb/zkusplaydung/item.cpp
-CMakeFiles/my_program.dir/item.cpp.obj: CMakeFiles/my_program.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=G:\111vse\111fjfi\3rok\cpp_ysikjdfghb\zkusplaydung\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/my_program.dir/item.cpp.obj"
-	C:\winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64ucrt-12.0.0-r2\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_program.dir/item.cpp.obj -MF CMakeFiles\my_program.dir\item.cpp.obj.d -o CMakeFiles\my_program.dir\item.cpp.obj -c G:\111vse\111fjfi\3rok\cpp_ysikjdfghb\zkusplaydung\item.cpp
-
-CMakeFiles/my_program.dir/item.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/my_program.dir/item.cpp.i"
-	C:\winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64ucrt-12.0.0-r2\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E G:\111vse\111fjfi\3rok\cpp_ysikjdfghb\zkusplaydung\item.cpp > CMakeFiles\my_program.dir\item.cpp.i
-
-CMakeFiles/my_program.dir/item.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/my_program.dir/item.cpp.s"
-	C:\winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64ucrt-12.0.0-r2\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S G:\111vse\111fjfi\3rok\cpp_ysikjdfghb\zkusplaydung\item.cpp -o CMakeFiles\my_program.dir\item.cpp.s
+CMakeFiles/my_program.dir/inventory.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/my_program.dir/inventory.cpp.s"
+	C:\winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64ucrt-12.0.0-r2\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S G:\111vse\111fjfi\3rok\cpp_ysikjdfghb\zkusplaydung\inventory.cpp -o CMakeFiles\my_program.dir\inventory.cpp.s
 
 CMakeFiles/my_program.dir/main.cpp.obj: CMakeFiles/my_program.dir/flags.make
 CMakeFiles/my_program.dir/main.cpp.obj: G:/111vse/111fjfi/3rok/cpp_ysikjdfghb/zkusplaydung/main.cpp
 CMakeFiles/my_program.dir/main.cpp.obj: CMakeFiles/my_program.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=G:\111vse\111fjfi\3rok\cpp_ysikjdfghb\zkusplaydung\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/my_program.dir/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=G:\111vse\111fjfi\3rok\cpp_ysikjdfghb\zkusplaydung\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/my_program.dir/main.cpp.obj"
 	C:\winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64ucrt-12.0.0-r2\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_program.dir/main.cpp.obj -MF CMakeFiles\my_program.dir\main.cpp.obj.d -o CMakeFiles\my_program.dir\main.cpp.obj -c G:\111vse\111fjfi\3rok\cpp_ysikjdfghb\zkusplaydung\main.cpp
 
 CMakeFiles/my_program.dir/main.cpp.i: cmake_force
@@ -142,8 +128,7 @@ CMakeFiles/my_program.dir/main.cpp.s: cmake_force
 my_program_OBJECTS = \
 "CMakeFiles/my_program.dir/entity.cpp.obj" \
 "CMakeFiles/my_program.dir/gameboard.cpp.obj" \
-"CMakeFiles/my_program.dir/inventar.cpp.obj" \
-"CMakeFiles/my_program.dir/item.cpp.obj" \
+"CMakeFiles/my_program.dir/inventory.cpp.obj" \
 "CMakeFiles/my_program.dir/main.cpp.obj"
 
 # External object files for target my_program
@@ -151,14 +136,13 @@ my_program_EXTERNAL_OBJECTS =
 
 my_program.exe: CMakeFiles/my_program.dir/entity.cpp.obj
 my_program.exe: CMakeFiles/my_program.dir/gameboard.cpp.obj
-my_program.exe: CMakeFiles/my_program.dir/inventar.cpp.obj
-my_program.exe: CMakeFiles/my_program.dir/item.cpp.obj
+my_program.exe: CMakeFiles/my_program.dir/inventory.cpp.obj
 my_program.exe: CMakeFiles/my_program.dir/main.cpp.obj
 my_program.exe: CMakeFiles/my_program.dir/build.make
 my_program.exe: CMakeFiles/my_program.dir/linkLibs.rsp
 my_program.exe: CMakeFiles/my_program.dir/objects1.rsp
 my_program.exe: CMakeFiles/my_program.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=G:\111vse\111fjfi\3rok\cpp_ysikjdfghb\zkusplaydung\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable my_program.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=G:\111vse\111fjfi\3rok\cpp_ysikjdfghb\zkusplaydung\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable my_program.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\my_program.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -10,8 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "G:/111vse/111fjfi/3rok/cpp_ysikjdfghb/zkusplaydung/entity.cpp" "CMakeFiles/my_program.dir/entity.cpp.obj" "gcc" "CMakeFiles/my_program.dir/entity.cpp.obj.d"
   "G:/111vse/111fjfi/3rok/cpp_ysikjdfghb/zkusplaydung/gameboard.cpp" "CMakeFiles/my_program.dir/gameboard.cpp.obj" "gcc" "CMakeFiles/my_program.dir/gameboard.cpp.obj.d"
-  "G:/111vse/111fjfi/3rok/cpp_ysikjdfghb/zkusplaydung/inventar.cpp" "CMakeFiles/my_program.dir/inventar.cpp.obj" "gcc" "CMakeFiles/my_program.dir/inventar.cpp.obj.d"
-  "G:/111vse/111fjfi/3rok/cpp_ysikjdfghb/zkusplaydung/item.cpp" "CMakeFiles/my_program.dir/item.cpp.obj" "gcc" "CMakeFiles/my_program.dir/item.cpp.obj.d"
+  "G:/111vse/111fjfi/3rok/cpp_ysikjdfghb/zkusplaydung/inventory.cpp" "CMakeFiles/my_program.dir/inventory.cpp.obj" "gcc" "CMakeFiles/my_program.dir/inventory.cpp.obj.d"
   "G:/111vse/111fjfi/3rok/cpp_ysikjdfghb/zkusplaydung/main.cpp" "CMakeFiles/my_program.dir/main.cpp.obj" "gcc" "CMakeFiles/my_program.dir/main.cpp.obj.d"
   )
 

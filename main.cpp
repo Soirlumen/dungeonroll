@@ -1,16 +1,19 @@
 #include "hlavickovysoubor.h"
 #include "gameboard.h"
 
-std::vector<int> kuk;
+
+std::map<int, itemtype> all_items{
+  {SMALLHEAL, itemtype("Small healing potion", 10)},
+  {SMALLPOWERBOOST, itemtype("Small attack blessing", 10)},
+  {SMALLINVENTORYEXPANSION, itemtype("Small pocket", 1)},
+  //{SMALLLUCKBOOST, itemtype("Small vial of Luck", 1)},
+  //{SMALLWALLET, itemtype("A little bit of grosh", 10)}
+
+};
+
 
 int main()
 {
-  item potionsilly(2, 10);
-  item potionZdravim(1, 20);
-  std::vector<item> kapsa={potionsilly,potionZdravim};
-  entity žába(100, 10,3);
-  entity myrka(100, 10,3,kapsa);
-  gameboard clovecenezlobse(myrka, žába);
-  clovecenezlobse.game2();
+
   return 0;
 }

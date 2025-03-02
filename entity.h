@@ -1,29 +1,31 @@
 #ifndef ENTITY_H
 #define ENTITY_H
 #include "hlavickovysoubor.h"
-#include "item.h"
+#include "inventory.h"
 
 class entity
 {
 private:
-    int health,inventorysize;
+    unsigned int health;
     unsigned int power;
-    std::vector<item> inventory;
-
-public:
-    entity(int _h, unsigned int _p,int _is, std::vector<item> _i);
-    entity(int _h, unsigned int _p,int _is);
-    int getHealth();
-    unsigned int getPower();
+    inventory pocket;
+    // unsigned int money;
+    // unsigned int energy? nebo to udelat jako nejakou mapu statů? 1,heath; 2,attackpower;3,magicpower????
     void setHealth(int _h);
     void setPower(unsigned int _p);
+    inventory getInventory() const;
+
+public:
+    unsigned int getHealth();
+    unsigned int getPower();
+    entity(unsigned int _h, unsigned int _p, inventory _i);
     bool isAlive();
-    std::vector<item> & getInventory();
-    void addInInventory(item what);
-    void removeFromInventory(unsigned int position);
-    void useItem(unsigned int position);
-    void showInventory();
-    bool isInInventory(unsigned int position);
+    void health_changer(int _health_modyfier);
+    void power_changer(int _power_modyfier);
+    void inventory_size_changer(int _inv_size_modyfier);
+    void use_item(int _itemId);
+    void vanish_item(unsigned int _itemId);
+    unsigned int entity_attack();
 };
 
 #endif
