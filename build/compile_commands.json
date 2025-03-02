@@ -1,0 +1,26 @@
+[
+{
+  "directory": "G:/111vse/111fjfi/3rok/cpp_ysikjdfghb/zkusplaydung/build",
+  "command": "C:\\winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64ucrt-12.0.0-r2\\mingw64\\bin\\g++.exe   -g -std=gnu++17 -o CMakeFiles\\gej.dir\\entity.cpp.obj -c G:\\111vse\\111fjfi\\3rok\\cpp_ysikjdfghb\\zkusplaydung\\entity.cpp",
+  "file": "G:/111vse/111fjfi/3rok/cpp_ysikjdfghb/zkusplaydung/entity.cpp",
+  "output": "CMakeFiles/gej.dir/entity.cpp.obj"
+},
+{
+  "directory": "G:/111vse/111fjfi/3rok/cpp_ysikjdfghb/zkusplaydung/build",
+  "command": "C:\\winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64ucrt-12.0.0-r2\\mingw64\\bin\\g++.exe   -g -std=gnu++17 -o CMakeFiles\\gej.dir\\gameboard.cpp.obj -c G:\\111vse\\111fjfi\\3rok\\cpp_ysikjdfghb\\zkusplaydung\\gameboard.cpp",
+  "file": "G:/111vse/111fjfi/3rok/cpp_ysikjdfghb/zkusplaydung/gameboard.cpp",
+  "output": "CMakeFiles/gej.dir/gameboard.cpp.obj"
+},
+{
+  "directory": "G:/111vse/111fjfi/3rok/cpp_ysikjdfghb/zkusplaydung/build",
+  "command": "C:\\winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64ucrt-12.0.0-r2\\mingw64\\bin\\g++.exe   -g -std=gnu++17 -o CMakeFiles\\gej.dir\\inventory.cpp.obj -c G:\\111vse\\111fjfi\\3rok\\cpp_ysikjdfghb\\zkusplaydung\\inventory.cpp",
+  "file": "G:/111vse/111fjfi/3rok/cpp_ysikjdfghb/zkusplaydung/inventory.cpp",
+  "output": "CMakeFiles/gej.dir/inventory.cpp.obj"
+},
+{
+  "directory": "G:/111vse/111fjfi/3rok/cpp_ysikjdfghb/zkusplaydung/build",
+  "command": "C:\\winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64ucrt-12.0.0-r2\\mingw64\\bin\\g++.exe   -g -std=gnu++17 -o CMakeFiles\\gej.dir\\main.cpp.obj -c G:\\111vse\\111fjfi\\3rok\\cpp_ysikjdfghb\\zkusplaydung\\main.cpp",
+  "file": "G:/111vse/111fjfi/3rok/cpp_ysikjdfghb/zkusplaydung/main.cpp",
+  "output": "CMakeFiles/gej.dir/main.cpp.obj"
+}
+]

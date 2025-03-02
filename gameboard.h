@@ -6,18 +6,17 @@
 
 class gameboard
 {
-    private:
+private:
     entity gamer;
     entity beast;
+
+    unsigned int diceRoll(unsigned int _dice);
+    void gamerDecision(unsigned int _dec);
+    void attack(entity& _who, entity& _whom);
+
 public:
     gameboard(entity _g, entity _b);
-    unsigned int diceRoll(unsigned int _dice);
-    void gamerAttack();
-    void gamerDecision(unsigned int _dec);
-    void beastAttack();
-    void game2();
-    void game3();
-    void decision(unsigned int _d);
+    void fight();
 };
 
 #endif

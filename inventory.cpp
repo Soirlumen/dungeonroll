@@ -52,10 +52,11 @@ bool inventory::add_item(int _newitemid)
     invent.push_back(_newitemid);
     return true;
 }
+
 // tato funkce naopak vrací item na i-té pozici
 int inventory::find_item_by_position(int _position)
 {
-    if (_position > get_invent_size())
+    if (_position < 0 || _position >= get_invent_size())
     {
         return -1;
     }
@@ -65,11 +66,6 @@ int inventory::find_item_by_position(int _position)
 // tato funkce vrací int hodnotu, která znazornuje pozici, kde ve vektoru se vyskytuje prvni id itemu
 int inventory::find_position_of_item_by_id(int _itemid)
 {
-    if (!is_item_id(_itemid))
-    {
-        std::cout << "item does not exist\n";
-        return -1;
-    }
     for (size_t i = 0; i < get_invent_size(); i++)
     {
         if (find_item_by_position(i) == _itemid)
@@ -83,11 +79,31 @@ bool inventory::remove_item(int _removingitemid)
 {
     if (find_position_of_item_by_id(_removingitemid) < 0)
     {
+        std::cout << "item is not valid in removing\n";
         return false;
     }
     invent.erase(invent.begin() + find_position_of_item_by_id(_removingitemid));
+    std::cout << "item REMOVED\n";
     return true;
 }
+
+
+void inventory::inventory_cout()
+{
+    std::cout << "your inventory: ";
+    for (int i = 0; i < get_invent_size(); i++)
+    {
+        int itemID = find_item_by_position(i);
+        std::cout << i << "-th item is: " << get_itemtype(itemID).get_name();
+
+        if (i < get_invent_size() - 1)
+        {
+            std::cout << ", ";
+        }
+    }
+    std::cout << ".\n";
+}
+
 /* int inventory::use_item(int _itemid)
 {
     if (remove_item(_itemid))
@@ -97,19 +113,6 @@ bool inventory::remove_item(int _removingitemid)
     return -1;
 } */
 
-void inventory::inventory_cout()
-{
-    std::cout << "your inventory: ";
-    for (int i = 0; i < get_invent_size(); i++)
-    {
-        std::cout << i << "-th item is: " << get_itemtype(find_item_by_position(i));
-        if (i < get_max_size() - 1)
-        {
-            std::cout << ", "; // Oddělení čárkou, pokud to není poslední prvek
-        }
-    }
-    std::cout << ".\n";
-}
 
 inventory::~inventory()
 {

@@ -1,16 +1,16 @@
 #include "gameboard.h"
 template <typename T>
-void piš(T t)
+void easywrite(T t)
 {
     std::cout << t;
 }
 
 template <typename T, typename... Args>
-void piš(T t, Args... args)
+void easywrite(T t, Args... args)
 {
     std::cout << t;
 
-    piš(args...);
+    easywrite(args...);
 }
 
 gameboard::gameboard(entity _g, entity _b) : gamer(_g), beast(_b) {}
@@ -37,46 +37,47 @@ unsigned int gameboard::diceRoll(unsigned int _dice)
 {
     int dmg = (gamer.getPower() + diceRoll(3));
     beast.setHealth(beast.getHealth() - dmg);
-    piš("dal jsi prisere: ", dmg, " damage, bestii zbyva: ", beast.getHealth(), " zivotu\n");
+    easywrite("dal jsi prisere: ", dmg, " damage, bestii zbyva: ", beast.getHealth(), " zivotu\n");
 }
  */
 void gameboard::gamerDecision(unsigned int _dec)
 {
+    int itemId;
     switch (_dec)
     {
     case 1:
-        int dmg = gamer.entity_attack() + diceRoll(3);
-        beast.health_changer(dmg);
-        piš("dal jsi prisere: ", dmg, " damage, bestii zbyva: ", beast.getHealth(), " zivotu\n");
+        attack(gamer, beast);
         break;
     case 2:
-        int itemId;
-        std::cin>>itemId;
+        gamer.getInventory().inventory_cout();
+        easywrite("napis cislo, ktery item chces pouzit?");
+        std::cin >> itemId;
         gamer.use_item(itemId);
+        break;
+    case 3:
+        exit(0);
+        break;
     default:
         // vymyslet jestli je nutne tu pouzivat rekurzi1
-        piš("Neudelal jsi nic lmao... zkus to znovu chca cha\n");
-        unsigned int _newdec;
-        std::cin >> _newdec;
-        gamerDecision(_newdec);
+        easywrite("Neudelal jsi nic lmao... zkus to znovu chca cha\n");
         break;
     }
 }
 
-void gameboard::beastAttack()
+void gameboard::attack(entity& _who, entity& _whom)
 {
-    int dmg = beast.entity_attack()+diceRoll(3);
-    gamer.health_changer(dmg);
-    piš("prisera dala: ", dmg, " damage, hraci zbyva: ", gamer.getHealth(), " zivotu\n");
+    int dmg = _who.entity_attack() + diceRoll(3);
+    _whom.health_changer(-dmg);
+    easywrite(_who.getName() + " dala: ", dmg, " damage, " + _whom.getName() + " zbyva: ", _whom.getHealth(), " zivotu\n");
 }
 
-void gameboard::game2()
+void gameboard::fight()
 {
     int round = 1;
     while (true)
     {
-        piš(round, " # kolo, zivoty hrace: ", gamer.getHealth(), ", zivoty bestie: ", beast.getHealth(), "\n");
-        piš("kolo hrace:, napis 1, pokud chces boj, napis 2, pokud pouzit item \n");
+        easywrite(round, " # kolo, zivoty hrace: ", gamer.getHealth(), ", zivoty bestie: ", beast.getHealth(), "\n");
+        easywrite("kolo hrace:, napis 1, pokud chces boj, napis 2, pokud pouzit item, 3 pokud chces skoncit hru \n");
         int dec;
         std::cin >> dec;
         gamerDecision(dec);
@@ -84,8 +85,8 @@ void gameboard::game2()
         {
             break;
         }
-        piš("kolo bestie, koukni bumbumbaac \n");
-        beastAttack();
+        easywrite("kolo bestie, koukni bumbumbaac \n");
+        attack(beast, gamer);
         if (!gamer.isAlive())
         {
             break;
@@ -94,46 +95,10 @@ void gameboard::game2()
     }
     if (gamer.isAlive())
     {
-        piš("zabil jsi priseru yippe\n");
+        easywrite("zabil jsi priseru yippe\n");
     }
     else
     {
-        piš("prisera te zabila lol");
+        easywrite("prisera te zabila lol");
     }
-}
-
-void gameboard::game3()
-{
-    int round = 1;
-    while (true)
-    {
-        piš(round, " # kolo, zivoty hrace: ", gamer.getHealth(), ", zivoty bestie: ", beast.getHealth(), "\n");
-        piš("kolo hrace:, napis 1, pokud chces boj, napis 2, pokud pouzit item \n");
-        int dec;
-        std::cin >> dec;
-        gamerDecision(dec);
-        if (!beast.isAlive())
-        {
-            break;
-        }
-        piš("kolo bestie, koukni bumbumbaac \n");
-        beast.entity_attack();
-        if (!gamer.isAlive())
-        {
-            break;
-        }
-        round++;
-    }
-    if (gamer.isAlive())
-    {
-        piš("zabil jsi priseru yippe\n");
-    }
-    else
-    {
-        piš("prisera te zabila lol");
-    }
-}
-
-void gameboard::decision(unsigned int _d)
-{
 }

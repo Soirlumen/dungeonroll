@@ -3,4 +3,4 @@ project(MyProject)
 
 set(CMAKE_CXX_STANDARD 17)  # Nebo jinou verzi C++
 file(GLOB SOURCES "*.cpp")  # Najde všechny .cpp soubory
-add_executable(my_program ${SOURCES})
+add_executable(gej ${SOURCES})
